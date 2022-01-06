@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utopia</title>
+    <link rel="icon" href="{{url_for('static', filename='img/utopia.png')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+</head>
+<body>
+    <section class="sec">
+        <video src="https://cdn2.unrealengine.com/homepage-opener-5a55a50aaa4c.mp4" type="video/mp4" autoplay muted loop></video>
+        <h2>Utopia</h2>
+        <div class="dot"></div>
+        <ul class="contact">
+            <li>
+                <a onclick="popupToggle();" href="#">Contact</a>
+                <div id="popup">
+                    <div class="content">
+                        <h3>Welcome</h3>
+                        <p>Get in touch!</p>
+                        <div class="inputBox">
+                            <form id="capform" class="formulario" method="post">
+                                <input type="text" id="nombre" class="nombre" name="nombre" placeholder="Name" required>
+                                <input type="email" id="email" class="email" name="email" placeholder="Email" required multiple>
+                                <textarea id="mensaje" class="mensaje" name="mensaje" placeholder="Message" required></textarea>
+                                <div class="g-recaptcha" data-sitekey="{{sitekey}}" data-size="invisible"></div>
+                                <input type="submit" value="Send" class="btn">
+                            </form>
+                        </div>
+                    </div>        
+                    <a class="close" onclick="popupToggle();"><img src="{{url_for('static', filename='img/close.png')}}" alt="close"></a>
+                </div>
+            </li>
+        </ul>
+    </section>    
+    <script>
+        function popupToggle()
+        {
+            const popup = document.getElementById('popup');
+            popup.classList.toggle('popup')
+        }
+    </script>
+    <script>
+        const mail = document.querySelector('popup');
+        const dot = document.querySelector('.dot');
+        const sec = document.querySelector('.sec');
+        const a = document.querySelector('a');
+        dot.ondblclick = function(){
+            dot.classList.toggle('active')
+            sec.classList.toggle('active')
+            a.classList.toggle('active')
+            popup.classList.toggle('active')
+        }
+        document.addEventListener("mousemove", function(e){
+            const dot = document.querySelector('.dot');
+            dot.style.left = e.pageX + 'px';
+            dot.style.top = e.pageY + 'px';
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Brutal Type';
+    src: local('Brutal Type Medium'), local('Brutal-Type-Medium'),
+        url('BrutalType-Medium.woff2') format('woff2'),
+        url('BrutalType-Medium.woff') format('woff'),
+        url('BrutalType-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
