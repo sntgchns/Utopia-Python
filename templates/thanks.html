@@ -3,12 +3,11 @@
     <link rel="stylesheet" href="{{url_for('static', filename='css/404.css')}}">
 {% endblock %}
 {% block body %}
-    {% if name %}
-      <h1>Thank you {{ name }}, we'll get in touch soon. Redirecting to <a href="https://utopiansworld.com">UTOPIA!</a></h1>
+    {% if nombre %}
+      <h1>Thank you {{ nombre }}, we'll get in touch soon. Redirecting to <a href="https://utopiansworld.com">UTOPIA!</a></h1>
+      <meta http-equiv="refresh" content="3; url=/">
     {% else %}
       <h1>Thank you, we'll get in touch soon. Redirecting to <a href="https://utopiansworld.com">UTOPIA!</a></h1>
       <meta http-equiv="refresh" content="3; url=/">
     {% endif %}
-    <h1>Thank you, we'll get in touch soon. Redirecting to <a href="https://utopiansworld.com">UTOPIA!</a></h1>
-    <meta http-equiv="refresh" content="3; url=/">
 {% endblock %}
