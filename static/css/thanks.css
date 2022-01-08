@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'Brutal Type';
+    src: local('Brutal Type Medium'), local('../fonts/Brutal-Type-Medium'),
+        url('../fonts/BrutalType-Medium.woff2') format('woff2'),
+        url('../fonts/BrutalType-Medium.woff') format('woff'),
+        url('../fonts/BrutalType-Medium.ttf') format('truetype');
+    font-style: normal;
+  }
+  *
+  {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Brutal Type';
+  }
+  body
+  {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      min-height: 100vh;
+      width: 50%;
+      text-align: center;
+  }
+  h1
+  {
+    position: relative;
+      font-weight: 500;
+      color: #000;
+  }
+  h3
+  {
+    font-weight: 300;
+    padding-top: 20px;
+  }
+  h3 a
+  {
+      text-decoration: none;
+      color: #6d0064;
+      text-shadow: 0 0 10px #6d0064, 0 0 40px #6d0064, 0 0 80px #6d0064;
+  }
+  @media only screen and (max-width: 992px)
+{    
+  body
+  {
+        font-size: 0.5rem;
+  }
+}
