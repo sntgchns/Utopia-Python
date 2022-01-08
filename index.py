@@ -21,7 +21,7 @@ def home():
         msg = Message(subject=f"Contact from UTOPIA", 
                       body=f"Nombre: {nombre}\nEmail: {email}\nMensaje: {mensaje}", 
                       sender=(nombre, email),
-                      recipients=['santiagochinas@hotmail.com', 'santiagosonora@gmail.com', 'info@utopiansworld.com'])        
+                      recipients=['santiagochinas@hotmail.com', 'info@utopiansworld.com'])        
         mail.send(msg)
         return render_template('thanks.html', nombre=nombre)
     return render_template('index.html')
