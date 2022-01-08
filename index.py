@@ -4,11 +4,11 @@ from config import mail_username, mail_password
 
 app = Flask(__name__)
 
-app.config['MAIL_SERVER'] = 'smtp.ionos.es'
-app.config['MAIL_PORT'] = 587
+app.config['MAIL_SERVER'] = secret[0]
+app.config['MAIL_PORT'] = secret[1]
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = mail_username
-app.config['MAIL_PASSWORD'] = mail_password
+app.config['MAIL_USERNAME'] = secret[2]
+app.config['MAIL_PASSWORD'] = secret[3]
 
 mail = Mail(app)
 
