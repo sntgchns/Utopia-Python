@@ -18,7 +18,7 @@ def home():
         mensaje = request.form['mensaje']
         msg = Message(subject=f"Correo de {nombre}", 
                       body=f"Nombre: {nombre}\nEmail: {email}\nMensaje: {mensaje}", 
-                      sender=nombre, 
+                      sender=mail_username, 
                       recipients=['santiagochinas@hotmail.com'])        
         mail.send(msg)
         return render_template('thanks.html')
