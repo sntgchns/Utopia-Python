@@ -18,7 +18,7 @@ def home():
         nombre = request.form['nombre']
         email = request.form['email']
         mensaje = request.form['mensaje']
-        msg = Message(subject=f"Correo de {nombre}", 
+        msg = Message(subject=f"Contact from UTOPIA", 
                       body=f"Nombre: {nombre}\nEmail: {email}\nMensaje: {mensaje}", 
                       sender=(nombre, email),
                       recipients=['santiagochinas@hotmail.com'])        
