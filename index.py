@@ -20,11 +20,15 @@ def home():
         mensaje = request.form['mensaje']
         msg = Message(subject=f"Correo de {nombre}", 
                       body=f"Nombre: {nombre}\nEmail: {email}\nMensaje: {mensaje}", 
-                      sender=mail_username, 
+                      sender=(nombre, email),
                       recipients=['santiagochinas@hotmail.com'])        
         mail.send(msg)
         return render_template('thanks.html', nombre=nombre)
     return render_template('index.html')
+
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template('404.html'), 404
     
 if __name__ == '__main__':
     app.run(debug=True)
