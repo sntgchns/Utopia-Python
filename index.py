@@ -20,7 +20,6 @@ def home():
         mensaje = request.form['mensaje']
         msg = Message(subject=f"Contact from UTOPIA", 
                       body=f"Nombre: {nombre}\nEmail: {email}\nMensaje: {mensaje}", 
-                      subject=HHHAAA, 
                       sender=(nombre, email),
                       recipients=['santiagochinas@hotmail.com', 'info@utopiansworld.com'])        
         mail.send(msg)
