@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, url_for, redirect
+from flask import Flask, render_template, request
 from flask_mail import Mail, Message
 from config import mail_username, mail_password
 
@@ -23,9 +23,9 @@ def home():
                       sender=mail_username,
                       recipients=['santiagochinas@hotmail.com'])
         mail.send(msg)
-        return redirect(url_for('/'))
-    else:
         return render_template('404.html')
+    else:
+        return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
