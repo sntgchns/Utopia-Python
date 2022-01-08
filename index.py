@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 from flask_mail import Mail, Message
-from config import mail_username, mail_password
+from config import secret
 
 app = Flask(__name__)
 
