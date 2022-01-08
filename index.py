@@ -24,7 +24,8 @@ def home():
                       recipients=['santiagochinas@hotmail.com'])
         mail.send(msg)
         return render_template('index.html')
-    return render_template('index.html')
+    else
+        pass
 
 if __name__ == '__main__':
     app.run(debug=True)
