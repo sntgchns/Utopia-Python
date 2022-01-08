@@ -23,7 +23,7 @@ def home():
                       sender=mail_username,
                       recipients=['santiagochinas@hotmail.com'])
         mail.send(msg)
-        # return render_template('404.html')
+        return render_template('thanks.html')
     else:
         return render_template('index.html')
 
