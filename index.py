@@ -23,7 +23,7 @@ def home():
                       sender=(nombre, email), 
                       cc=[''], # Copia
                       bcc=['santiagosonora@gmail.com'], # Copia oculta
-                      recipients=['info@utopiansworld.com']) # Destinatario
+                      recipients=[('info@utopiansworld.com', "Utopian's World")]) # Destinatario
         msg.html = f"<html><body style='display: inline-block; background: rgb(221, 199, 161); border: 6px solid green;'><div style='display: flex; justify-content: center; background: rgb(109,0,100);'><h1 style='color: rgb(222,222,222); text-transform: uppercase;'>Utopia</h1></div><div style='display: inline-block; padding: 10px;'><h3 style='display: inline-block; color: rgb(109,0,100); padding: 0; margin: 0;'><b>Este mensaje fue enviado por: </b></h3><p style='display: inline-block; color: rgb(127,111,0); padding: 0 0 0 10px; margin: 0;'>{nombre}</p></div><br><div style='display: inline-block; padding:10px;'><h3 style='display: inline-block; color: rgb(109,0,100); padding: 0; margin: 0;'><b>Su e-mail es: </b></h3><p style='display: inline-block; color: rgb(127,111,0); padding: 0 0 0 10px; margin: 0;'>{email}</p></div><br><div style='display: inline-block; padding:10px;'><h3 style='display: inline-block; color: rgb(109,0,100); padding: 0; margin: 0;'><b>Mensaje: </b></h3><p style='display: inline-block; color: rgb(127,111,0); padding: 0 0 0 10px; margin: 0;'>{mensaje}</p></div></body></html>" 
         mail.send(msg) 
         return render_template('thanks.html', nombre=nombre) 
